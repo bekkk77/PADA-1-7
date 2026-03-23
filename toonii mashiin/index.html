@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="call">
+      <div class="display">0</div>
+      <div class="bottons">
+        <button class="Raem">clear</button>
+        <button class="Raem">AC</button>
+        <button class="Raem">%</button>
+        <button class="Mgl">/</button>
+        <button class="too">7</button>
+        <button class="too">8</button>
+        <button class="too">9</button>
+        <button class="Mgl">*</button>
+        <button class="too">4</button>
+        <button class="too">5</button>
+        <button class="too">6</button>
+        <button class="Mgl">-</button>
+        <button class="too">1</button>
+        <button class="too">2</button>
+        <button class="too">3</button>
+        <button class="Mgl">+</button>
+        <button class="too teg">0</button>
+        <button class="too">.</button>
+        <button class="Mgl">=</button>
+      </div>
+    </div>
+    <script>
+      let display = document.querySelector(".display");
+      let bottons = document.querySelectorAll("button");
+
+      let current "";
+      bottons.forEach(btn => {
+        btn.addEventListener("click",()=> {
+          let value = btn.innerText;}
+          if (value === "AC") {
+            current = "";
+            display.innerText = "0";
+          }
+          else if (vale === "clear"){
+            current = current.slice (0,-1);
+            display.innerText = current ||"0"
+          }
+          else if (value === "=") {
+            try {
+              let result = eval (
+                current
+                .replace (/urjikh/q,"*")
+                .replace(/khuwakh/q,"/")
+              );
+              display.innerText = result;
+              current = result.toString();
+            } catch {
+              display.innerText = "Error";
+              current = "";
+            }
+            else {
+              current += value;
+              display.innerText = current;
+            }
+        });
+      });
+    </script>
+  </body>
+</html>
